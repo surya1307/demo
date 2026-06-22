@@ -8,10 +8,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
-        run: docker build -t main .
+        run: docker build -t suryakaruna2001/main:latest .
       - name: image verification
         run: docker run --rm main
       - name: Login to DockerHub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
       - name: Push the Docker image
-        run: docker push main
+        run: docker push suryakaruna2001/main:latest
+
