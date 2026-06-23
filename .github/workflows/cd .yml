@@ -1,4 +1,4 @@
-name: Docker pipeline
+name: Docker pipeline 2
 on:
   push:
     branches: [ main ]
