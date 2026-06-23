@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
-        run: docker build -t suryakaruna2001/main:v1
+        run: docker build -t suryakaruna2001/main:v1 .
       - name: image verification
         run: docker run --rm suryakaruna2001/main:v1 
       - name: Login to DockerHub
